@@ -100,9 +100,6 @@
         cursor: pointer;
         transition: transform 0.5s;
       }
-      .btn:hover {
-        transform: scale(1.1);
-      }
       .carritoProductos {
         background-color: #ffffff;
         width: 100%;
@@ -208,6 +205,39 @@
 .dropdown-toggle:checked ~ .dropdown-content {
   display: block;
 }
+
+.Eliminar{
+  background-color: rgb(255, 93, 93);
+  margin-right: 10px;
+}
+.Eliminar:hover{
+  background-color: rgb(181, 67, 67);
+}
+.Agregar{
+  background-color: #28a745;
+}
+.Agregar:hover{
+  background-color: #218838;
+ 
+}
+
+/*back-button*/
+
+.back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fab9c3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e699a5;
+}
     </style>
   </head>
   <body>
@@ -250,10 +280,10 @@
                 <span class="material-symbols-outlined" style="cursor: pointer;">account_circle</span>
               </label>
               <div class="dropdown-content">
-                <a href="#">Mi perfil</a>
+                <a href="registroylogin/perfil.php">Mi perfil</a>
                 <a href="./carrito.html">Mis compras</a>
                 <a href="./favoritos.html">Favoritos</a>
-                <a href="#">Cerrar sesión</a>
+                <a href="registroylogin/logout.php">Cerrar sesión</a>
               </div>
             </div>
           </div>
@@ -263,20 +293,23 @@
     <br>
     <div><h1>CARRITO</h1></div>
     <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8 carritoProductos">
-          <div id="cart-items"></div>    
+    
+    <div class="container-fluid"><button id="back-button" class="back-button">Volver</button></div>
+        <div class="row">
+            <div class="col-12 col-md-8 carritoProductos">
+                <div id="cart-items"></div>
+            </div>
+            <div class="col-12 col-md-4" id="cart-summary">
+                <h2>Resumen de compra</h2>
+                <p id="total-items">Productos (0): $0.00</p>
+                <p id="total-amount">Total: $0.00</p>
+                <button class="btn btn-danger" id="empty-cart">Vaciar Carrito</button>
+                <button class="btn btn-success" id="continue-purchase">Continuar compra</button>
+            </div>
         </div>
-        <div class="col-12 col-md-4" id="cart-summary">
-          <h2>Resumen de compra</h2>
-          <p id="total-items">Productos (0): $0.00</p>
-          <p id="total-amount">Total: $0.00</p>
-          <button id="empty-cart">Vaciar Carrito</button>
-          <button id="continue-purchase">Continuar compra</button>
-        </div>
-      </div>
-    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="carrito.js"></script>
   </body>
 </html>

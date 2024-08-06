@@ -43,3 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     loadFavorites(); // Recargar la lista después de eliminar
   }
+
+  /*back-button*/
+document.getElementById('back-button').addEventListener('click', () => {
+  window.history.back();
+});

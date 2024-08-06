@@ -7,7 +7,10 @@ document.addEventListener('click', function(event) {
       dropdownToggle.checked = false;
   }
 });
-
+/*back-button*/
+document.getElementById('back-button').addEventListener('click', () => {
+  window.history.back();
+});
 
 /*carrito*/
 async function getProductById(id) {

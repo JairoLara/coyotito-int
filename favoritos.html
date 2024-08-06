@@ -60,10 +60,10 @@
                   <span class="material-symbols-outlined" style="cursor: pointer;">account_circle</span>
               </label>
               <div class="dropdown-content">
-                  <a href="#">Mi perfil</a>
-                  <a href="./carrito.html">Mis compras</a>
-                  <a href="./favoritos.html">Favoritos</a>
-                  <a href="#">Cerrar sesión</a>
+                <a href="registroylogin/perfil.php">Mi perfil</a>
+                <a href="./carrito.html">Mis compras</a>
+                <a href="./favoritos.html">Favoritos</a>
+                <a href="registroylogin/logout.php">Cerrar sesión</a>
               </div>
           </div>
         </div>
@@ -71,8 +71,12 @@
     </div>
   </div>
 
+  <div class="container-fluid"><br></div>
+  <div class="container-fluid text-center" style=" background-color: #fab9c3;"><h1 style="color: rgb(70, 70, 70);">FAVORITOS</h1></div>
+  
   <div class="container mt-4">
-    <h1>Mis Favoritos</h1>
+    <button id="back-button" class="back-button">Volver</button>
+    <br><br>
     <button id="clear-favorites" class="btn btn-danger mb-3">Vaciar Favoritos</button>
     <div id="favorites" class="product-container"></div>
   </div>

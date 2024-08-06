@@ -7,9 +7,9 @@
         $email = $_POST['email'];
         $numero = $_POST['phone'];
         $contraseña = $_POST['password'];
-
-        $sql = "INSERT INTO usuarios (Id, first_name, last_name, email, phone, password) VALUES (null, '$nombre',
-         '$apellido', '$email', '$numero', '$contraseña')";
+        $image = $_POST['imagen'];
+        $sql = "INSERT INTO usuarios (Id, first_name, last_name, email, phone, password, imagen) VALUES (null, '$nombre',
+         '$apellido', '$email', '$numero', '$contraseña', '$imagen')";
         $resultado = mysqli_query($conexion,$sql);
             if ($resultado) {
                 header("Location: ../log.html");

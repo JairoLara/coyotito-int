@@ -1,5 +1,5 @@
 <?php
-    // Conectar a la base de datos
+    // conectar a la base de datos
     $servername = "localhost";
     $username = "registro";
     $password = "nn0_3Vijm_]299we";
@@ -10,6 +10,4 @@
     if(!$conexion){
         die("Conexion fallida: ". mysqli_connect_error());
     }
-    
-
 ?>
